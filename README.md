@@ -5,13 +5,13 @@ I needed to set up an iBeacon for a project I'm working on so I followed the [Ra
 To run the playbook you'll need to follow a few steps
 
 * Make sure you are running SSHD on the Raspberry Pi - this is included in the graphical installer
-* Add your SSH key to the ``pi`` user's ~/.ssh/authorized_keys2 file (this file didn't exist when I started, just append your key to the file if it does).
+* Add your SSH key to the ``pi`` user's ~/.ssh/authorized_keys2 file
 
 ~~~
-$ scp ~/.ssh/id_rsa.pub pi@<raspberry pi>:/home/pi/.ssh/authorized_keys2
+$ cat .ssh/id_rsa.pub | ssh pi@<your raspberry pi> "cat >> ~/.ssh/authorized_keys"
 ~~~
 
-* Install the python-apt package
+* Install the python-apt package, this is needed before Ansible can work it's magic;
 
 ~~~
 $ sudo apt-get install python-apt
