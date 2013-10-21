@@ -1,6 +1,6 @@
 # PiBeacon-Ansible
 
-I needed to set up an iBeacon for a project I'm working on so I followed the [Radius Networks guide](http://developer.radiusnetworks.com/2013/10/09/how-to-make-an-ibeacon-out-of-a-raspberry-pi.html) to setting up a Raspberry Pi with a Bluetooth LE USB dongle. I've wrapped the process in an Ansible playbook because I may need to create a few more beacons and I didn't want to have to repeat this process on each one.
+I needed to set up an iBeacon for a project I'm working on so I followed the [Radius Networks guide](http://developer.radiusnetworks.com/2013/10/09/how-to-make-an-ibeacon-out-of-a-raspberry-pi.html) to setting up a Raspberry Pi with a Bluetooth LE USB dongle. I've wrapped the process in an [Ansible](http://www.ansibleworks.com/) playbook because I may need to create a few more beacons and I didn't want to have to repeat this process on each one.
 
 To run the playbook you'll need to follow a few steps
 
