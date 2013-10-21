@@ -1,0 +1,29 @@
+- name: Install packages
+  apt: pkg={{ item }} state=present
+  with_items:
+      - libusb-dev
+      - libdbus-1-dev
+      - libglib2.0-dev
+      - libudev-dev
+      - libical-dev
+      - libical-dev
+      - libreadline-dev
+
+- name: Install BlueZ
+  script: install_bluez.sh
+
+- name: Create scripts directory
+  file: path=/home/pi/ibeacon/ state=directory owner=root group=root
+  
+- name: Copy start script
+  copy: src=start.sh dest=/home/pi/ibeacon/ owner=root group=root mode=0744 force=yes
+
+- name: Copy stop script
+  copy: src=stop.sh dest=/home/pi/ibeacon/ owner=root group=root mode=0744 force=yes
+  
+- name: Copy init script
+  copy: src=ibeacon dest=/etc/init.d/ owner=root group=root mode=0744 force=yes
+  
+- name: Update runlevel scripts
+  shell: update-rc.d ibeacon defaults
+ 

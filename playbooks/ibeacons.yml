@@ -1,0 +1,7 @@
+- name: Configure Raspberypi iBeacon
+  hosts: ibeacons
+  user: pi
+  sudo: yes
+
+  roles:
+    - ibeacon
