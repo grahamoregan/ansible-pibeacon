@@ -9,12 +9,12 @@ case "$1" in
 start)
         printf "%-50s" "Starting ibeacon..."
         cd /home/pi/ibeacon
-        ./start
+        ./start.sh
 ;;
 stop)
         printf "%-50s" "Stopping ibeacon..."
         cd /home/pi/ibeacon
-        ./stop
+        ./stop.sh
 ;;
 restart)
         $0 stop
