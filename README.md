@@ -11,7 +11,6 @@ To run the playbook you'll need to follow a few steps
 $ cat .ssh/id_rsa.pub | ssh pi@<your raspberry pi> "cat >> ~/.ssh/authorized_keys"
 ~~~
 
-
 * Then run the playbook against the selected inventory
 
 ~~~
@@ -21,5 +20,5 @@ $ ansible-playbook -i inventory/dev
 It takes quite a long time for the process to complete but once it does you should be able to stop and start the beacon using;
 
 ~~~
-# service ibeacon stop/start
+# /etc/init.d/ibeacon stop/start
 ~~~
