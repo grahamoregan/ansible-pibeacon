@@ -11,11 +11,6 @@ To run the playbook you'll need to follow a few steps
 $ cat .ssh/id_rsa.pub | ssh pi@<your raspberry pi> "cat >> ~/.ssh/authorized_keys"
 ~~~
 
-* Install the python-apt package, this is needed before Ansible can work it's magic;
-
-~~~
-$ sudo apt-get install python-apt
-~~~
 
 * Then run the playbook against the selected inventory
 

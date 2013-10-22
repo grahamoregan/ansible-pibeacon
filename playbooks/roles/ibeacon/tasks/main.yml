@@ -1,3 +1,6 @@
+- name: Install python-apt
+  shell: apt-get install python-apt
+
 - name: Install packages
   apt: pkg={{ item }} state=present
   with_items:
